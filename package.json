@@ -31,5 +31,20 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
+      "src/actions/**/*.{js,jsx}",
+      "src/reducers/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 85,
+        "branches": 90,
+        "functions": 80,
+        "lines": 90
+      }
+    }
   }
 }
