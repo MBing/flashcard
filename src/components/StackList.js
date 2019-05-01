@@ -5,7 +5,7 @@ import { setStack, loadStacks } from '../actions';
 
 import stacks from '../data/stacks.json';
 
-class StacklistContainer extends Component {
+export class StackListContainer extends Component {
     componentDidMount() {
         if (!Boolean(this.props.stacks.length)) {
             this.props.loadStacks(stacks);
@@ -33,7 +33,7 @@ const mapStateToProps = state => ({
     stacks: state.stacks,
 });
 
-export const Stacklist = connect(
+export const StackList = connect(
     mapStateToProps,
     { setStack, loadStacks }
-)(StacklistContainer);
+)(StackListContainer);

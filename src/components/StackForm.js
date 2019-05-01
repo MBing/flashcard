@@ -10,10 +10,9 @@ import {
     FormLabel,
 } from 'react-bootstrap';
 
-class StackFormContainer extends Component {
-    constructor() {
-        super();
-
+export class StackFormContainer extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
             title: '',
             cards: [],
@@ -48,7 +47,7 @@ class StackFormContainer extends Component {
                 <br />
                 <Form inline>
                     <FormGroup>
-                        <FormLabel>Title</FormLabel>{' '}
+                        <FormLabel>Title</FormLabel>
                         <FormControl
                             onChange={event =>
                                 this.setState({ title: event.target.value })

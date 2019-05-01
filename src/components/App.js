@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Stacklist } from './Stacklist';
+import { StackList } from './StackList';
 import { Link } from 'react-router-dom';
 
 class App extends Component {
@@ -8,9 +8,11 @@ class App extends Component {
             <div>
                 <h2>Flash Card</h2>
                 <hr />
-                <Stacklist />
+                <StackList />
                 <hr />
-                <Link to="stack_form">Create a New Stack</Link>
+                <Link to="stack_form">
+                    <h4>Create a New Stack</h4>
+                </Link>
             </div>
         );
     }
